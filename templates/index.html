@@ -1,3 +1,4 @@
+{% load static %}
 <html>
 <head>
 	<meta charset="utf-8">
@@ -8,14 +9,14 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-	<link href="style.css" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
 	<!-- Navbar-->
 	<nav class="navbar navbar-expand-md navbar-dark sticky top" >
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="#"><img src="images/logo1.png"></a>
+				<a class="navbar-brand" href="#"><img src="static/logo1.png"></a>
 			</div>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" >
 				<span class="navbar-toggler-icon"></span>
@@ -56,13 +57,13 @@
 		</ul>
 		<div class="carousel-inner">
 		  <div class="carousel-item active">
-			<img class="carousel-img d-block w-100" src="images/drew-graham-PVyhz0wmHdo-unsplash.jpg">
+			<img class="carousel-img d-block w-100" src="static/drew-graham-PVyhz0wmHdo-unsplash.jpg">
 		  </div>
 		  <div class="carousel-item">
-			<img class="carousel-img d-block w-100" src="images/aditya-ali-SzI4No8rQ14-unsplash.jpg">
+			<img class="carousel-img d-block w-100" src="static/aditya-ali-SzI4No8rQ14-unsplash.jpg">
 		  </div>
 		  <div class="carousel-item">
-			<img class="carousel-img d-block w-100" src="images/david-hofmann-XmD4gx8jsXE-unsplash.jpg">
+			<img class="carousel-img d-block w-100" src="static/david-hofmann-XmD4gx8jsXE-unsplash.jpg">
 		  </div>
 		</div>
 		<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -105,7 +106,7 @@
 	<div class="row padding">
 		<div class="col-md-6">
 			<div class="profile-card">
-				<img class="card-img-top img-fluid" src="images/sangeetapanwar.jpg" alt="Card image cap">
+				<img class="card-img-top img-fluid" src="static/sangeetapanwar.jpg" alt="Card image cap">
 				<div class="card-body">
 				  <h5 class="card-title">Card title</h5>
 				  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -115,7 +116,7 @@
 		</div>
 		<div class="col-md-6">
 			<div class="profile-card">
-				<img class="card-img-top img-fluid" src="images/toshita.jpeg" alt="Card image cap">
+				<img class="card-img-top img-fluid" src="static/toshita.jpeg" alt="Card image cap">
 				<div class="card-body">
 				  <h5 class="card-title">Card title</h5>
 				  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -139,7 +140,7 @@
 	<div class="row padding">
 		<div class="col-xs-12 col-md-6 col-lg-4">
 			<div class="card mx-auto" style="width: 18rem;">
-				<img class="card-img-top img-fluid" src="images/regulardanceclasses.jpg" alt="Card image cap">
+				<img class="card-img-top img-fluid" src="static/regulardanceclasses.jpg" alt="Card image cap">
 				<div class="card-body">
 				  <h5 class="card-title">Regular Dance Classes</h5>
 				  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -157,7 +158,7 @@
 		</div>
 		<div class="col-xs-12 col-md-6 col-lg-4">
 			<div class="card mx-auto" style="width: 18rem;">
-				<img class="card-img-top img-fluid" src="images/marriage.jpg" alt="Card image cap">
+				<img class="card-img-top img-fluid" src="static/marriage.jpg" alt="Card image cap">
 				<div class="card-body">
 				  <h5 class="card-title">Dance Workshops</h5>
 				  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -175,7 +176,7 @@
 		</div>
 		<div class="col-xs-12 col-md-6 col-lg-4">
 			<div class="card mx-auto" style="width: 18rem;">
-				<img class="card-img-top img-fluid" src="images/marriage.jpg" alt="Card image cap">
+				<img class="card-img-top img-fluid" src="static/marriage.jpg" alt="Card image cap">
 				<div class="card-body">
 				  <h5 class="card-title">Marriage Choreography</h5>
 				  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -244,7 +245,7 @@
 	<div class="container-fluid padding">
 		<div class="row text-center">
 		<div class="col-md-4">
-			<img src="images/logo1.png" alt="">
+			<img src="static/logo1.png" alt="">
 			<hr class='light-1'>
 			<p>Contact Person : Sangeeta Panwar</p>
 			<p>thedanceraasstudio@gmail.com</p>

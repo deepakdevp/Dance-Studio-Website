@@ -55,7 +55,7 @@ ROOT_URLCONF = 'thedanceraasstudiowebsite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -69,8 +69,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'thedanceraasstudiowebsite.wsgi.application'
-
-
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
