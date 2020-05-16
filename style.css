@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+html,body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins',sans-serif;
+}
+
+.navbar-expand-md {
+  padding: .8rem;
+  background: #2b325c;
+}
+
+.navbar-nav li {
+  padding-right: 20px;
+}
+
+.nav-link {
+  font-size: 1.1rem !important;
+}
+
+.navbar-brand img {
+  width: 240px;
+}
+
+.navbar-collapse {
+  text-align: center;
+}
+
+.nav-item {
+  padding: 0.8rem;
+}
+
+/**.navbar-brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10px;
+}**/
+
+.carousel-inner {
+  width: 100%;
+  height: 100%;
+}
+
+
+.carousel-caption {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+}
+
+.carousel-caption h1{
+  font-size: 500%;
+   text-transform: uppercase;
+   text-shadow: 1px 1px 15px #000000;
+}
+
+.carousel-caption h3 {
+  font-size: 150%;
+  font-weight: 500;
+  padding: 20px;
+  text-shadow: 1px 1px 5px #000000;
+}
+
+.carousel-img
+{
+    width: 150%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.welcome {
+  width: 75%;
+  margin: 0 auto;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
+
+.profile-card img {
+  width: 100%!important;
+   height: 60rem!important;
+   object-fit: cover;
+}
+
+.welcome hr {
+  border-top: 2px solid #b4b4b4;
+  width: 95%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.social a {
+  font-size: 4.5em;
+  padding: 3rem;
+}
+
+.fa-facebook {
+  color: blue;
+  font-size: 4rem;
+}
+
+.fa-youtube {
+  color: red;
+  font-size: 4rem;
+}
+
+.fa-instagram {
+  color: pink;
+  font-size: 4rem;
+}
+
+.fa-whatsapp {
+  color:#fff;
+  background:
+  linear-gradient(#25d366,#25d366)10px 84%/10px 15px no-repeat,
+  radial-gradient(#25d366 60%,transparent 0);
+}
+
+hr.light {
+  border-top: #d5d5d5 solid 1px;
+  width: 75%;
+}
+
+.card {
+  margin: 20px 10px;
+}
+
+footer {
+  background-color: #2b325c;
+  color: #d5d5d5;
+  padding-top: 2rem;
+}
+
+hr.light-1 {
+  border-top: #d5d5d5 solid 1px;
+  width: 75%;
+}
+hr.light {
+  border-top: #d5d5d5 solid 1px;
+  width: 55%;
+}
+
+.formdiv {
+  margin-top: 2rem;;
+  margin-left: 25%;
+  margin-bottom: auto;
+
+}
+
+.connect{
+  margin-top: 1rem;
+  padding: 2.5rem;
+}
+
+.social{
+  margin-top: 1.2rem;
+}
+
+.contact {
+  padding: 2rem;
+  background: rgb(255,255,255);
+ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(224,240,15,1) 0%, rgba(0,212,255,1) 100%);
+}
