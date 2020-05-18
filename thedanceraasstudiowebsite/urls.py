@@ -6,4 +6,5 @@ from .views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home),
+    path('message/',message.as_view()),
 ]

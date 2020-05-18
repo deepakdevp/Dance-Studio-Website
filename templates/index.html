@@ -5,10 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Complete Bootstrap 4 Website Layout</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	
 	<link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
@@ -85,7 +82,9 @@
 			</div>
 			<hr>
 			<div class="col-12">
-				<p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto error quod sunt tempora numquam sit eum optio a architecto, velit dolorem ipsa exercitationem labore, amet ipsum reiciendis voluptas cum vero!</p>
+				<p class="lead">THE DANCE RAAS STUDIO is a place where people from all walks of life share a common passion for DANCE. Founded by SANGEETA PANWAR on September 5th 2018. THE DANCE RAAS STUDIO beleives in making DANCE as simple as it sounds for all age group right from KIds, Teens, Adults and Ladies.
+
+					Everyone has a talent. But we need the right platform to open up and showcase it. We help you overcome all your fears enhance your personality. This channel is for students who can share this links to their friends and relatives for everyone to see your talent.</p>
 			</div>
 		</div>
 	</div>
@@ -138,7 +137,7 @@
 </div>
 <div class="container-fluid padding">
 	<div class="row padding">
-		<div class="col-xs-12 col-md-6 col-lg-4">
+		<div class="col-xs-12 col-md-6 col-lg-3">
 			<div class="card mx-auto" style="width: 18rem;">
 				<img class="card-img-top img-fluid" src="static/regulardanceclasses.jpg" alt="Card image cap">
 				<div class="card-body">
@@ -156,7 +155,27 @@
 				</div>
 			  </div>
 		</div>
-		<div class="col-xs-12 col-md-6 col-lg-4">
+		<div class="col-xs-12 col-md-6 col-lg-3">
+			<div class="card mx-auto" style="width: 18rem;">
+				<img class="card-img-top img-fluid" src="static/regulardanceclasses.jpg" alt="Card image cap">
+				<div class="card-body">
+				  <h5 class="card-title">Online Dance Classes</h5>
+				  <p class="card-text">Due to this pandemic online classes has become a trend and will be a big thing for years to come
+						More and more people are looking for online classes daily and we are here to provide it to these people.
+				  </p>
+				</div>
+				<ul class="list-group list-group-flush">
+				  <li class="list-group-item">Cras justo odio</li>
+				  <li class="list-group-item">Dapibus ac facilisis in</li>
+				  <li class="list-group-item">Vestibulum at eros</li>
+				</ul>
+				<div class="card-body">
+				  <a href="#" class="card-link">Card link</a>
+				  <a href="#" class="card-link">Another link</a>
+				</div>
+			  </div>
+		</div>
+		<div class="col-xs-12 col-md-6 col-lg-3">
 			<div class="card mx-auto" style="width: 18rem;">
 				<img class="card-img-top img-fluid" src="static/marriage.jpg" alt="Card image cap">
 				<div class="card-body">
@@ -174,7 +193,7 @@
 				</div>
 			  </div>
 		</div>
-		<div class="col-xs-12 col-md-6 col-lg-4">
+		<div class="col-xs-12 col-md-6 col-lg-3">
 			<div class="card mx-auto" style="width: 18rem;">
 				<img class="card-img-top img-fluid" src="static/marriage.jpg" alt="Card image cap">
 				<div class="card-body">
@@ -219,14 +238,15 @@
 			<h2>Drop us a message</h2>
 		</div>
 		<div class="formdiv col-6">
-		<form >
+		<form action="/message/" method="POST" id="post-form">
+			{% csrf_token %}
 			<div class="form-group">
 			  <label for="name">Your Name</label>
 			  <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Enter Name">
 			</div>
 			<div class="form-group">
 				<label for="exampleInputEmail1">Email address</label>
-				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+				<input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
 				<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 			  </div>
 			<div class="form-group">
@@ -277,6 +297,100 @@
 </footer>
 
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<!--<script src="{% static 'scripts/main.js' %}"></script>-->
+<script type="text/javascript">
+	$('#post-form').on('submit', function(event){
+		event.preventDefault();
+		console.log("form submitted!")  // sanity check
+		message();
+	});
+	
+	function message() {
+		console.log("create post is working!") // sanity check
+		$.ajax({
+			url : "message/", // the endpoint
+			type : "POST", // http method
+			data : { name : $('#name').val(),
+			email : $('#email').val(),
+			message : $('#message').val()}, // data sent with the post request
+	
+			// handle a successful response
+			success : function(json) {
+				$('#name').val(''); // remove the value from the input
+				$('#email').val(''); // remove the value from the input
+				$('#message').val(''); // remove the value from the input
+				console.log(json); // log the returned json to the console
+				console.log("success"); // another sanity check
+			},
+	
+			// handle a non-successful response
+			error : function(xhr,errmsg,err) {
+				$('#results').html("<div class='alert-box alert radius' data-alert>Oops! We have encountered an error: "+errmsg+
+					" <a href='#' class='close'>&times;</a></div>"); // add the error to the dom
+				console.log(xhr.status + ": " + xhr.responseText); // provide a bit more info about the error to the console
+			}
+		});
+	};
+	$(function() {
+
+
+// This function gets cookie with a given name
+function getCookie(name) {
+	var cookieValue = null;
+	if (document.cookie && document.cookie != '') {
+		var cookies = document.cookie.split(';');
+		for (var i = 0; i < cookies.length; i++) {
+			var cookie = jQuery.trim(cookies[i]);
+			// Does this cookie string begin with the name we want?
+			if (cookie.substring(0, name.length + 1) == (name + '=')) {
+				cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+				break;
+			}
+		}
+	}
+	return cookieValue;
+}
+var csrftoken = getCookie('csrftoken');
+
+/*
+The functions below will create a header with csrftoken
+*/
+
+function csrfSafeMethod(method) {
+	// these HTTP methods do not require CSRF protection
+	return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+}
+function sameOrigin(url) {
+	// test that a given url is a same-origin URL
+	// url could be relative or scheme relative or absolute
+	var host = document.location.host; // host + port
+	var protocol = document.location.protocol;
+	var sr_origin = '//' + host;
+	var origin = protocol + sr_origin;
+	// Allow absolute or scheme relative URLs to same origin
+	return (url == origin || url.slice(0, origin.length + 1) == origin + '/') ||
+		(url == sr_origin || url.slice(0, sr_origin.length + 1) == sr_origin + '/') ||
+		// or any other URL that isn't scheme relative or absolute i.e relative.
+		!(/^(\/\/|http:|https:).*/.test(url));
+}
+
+$.ajaxSetup({
+	beforeSend: function(xhr, settings) {
+		if (!csrfSafeMethod(settings.type) && sameOrigin(settings.url)) {
+			// Send the token to same-origin, relative URLs only.
+			// Send the token only if the method warrants CSRF protection
+			// Using the CSRFToken value acquired earlier
+			xhr.setRequestHeader("X-CSRFToken", csrftoken);
+		}
+	}
+});
+
+});
+</script>
 
 
 </html>
