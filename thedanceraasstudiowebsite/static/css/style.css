@@ -27,7 +27,7 @@ html,body {
   text-align: center;
 }
 
-.nav-item {
+.nav-item-1,.nav-item-2 {
   padding: 0.8rem;
 }
 
@@ -79,7 +79,7 @@ html,body {
 
 .profile-card img {
   width: 100%!important;
-   height: 60rem!important;
+   height: 40rem!important;
    object-fit: cover;
 }
 
@@ -106,7 +106,7 @@ html,body {
 }
 
 .fa-instagram {
-  color: pink;
+  color:#C13584;
   font-size: 4rem;
 }
 
@@ -126,9 +126,12 @@ hr.light {
   margin: 20px 10px;
 }
 
+.profile-card {
+  box-shadow: 5px 5px 10px #999;
+}
+
 footer {
-  background-color: #2b325c;
-  color: #d5d5d5;
+  
   padding-top: 2rem;
 }
 
@@ -161,4 +164,63 @@ hr.light {
   padding: 2rem;
   background: rgb(255,255,255);
  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(224,240,15,1) 0%, rgba(0,212,255,1) 100%);
+}
+
+
+
+/* Smartphones (portrait and landscape) ---------- */
+@media screen and (min-width: 320px) and (max-width: 480px){
+  /* styles */
+}
+/* Smartphones (portrait) ---------- */
+@media screen and (max-width: 320px){
+  /* styles */
+}
+/* Smartphones (landscape) ---------- */
+@media screen and (min-width: 321px){
+  /* styles */
+}
+/* Tablets, iPads (portrait and landscape) ---------- */
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  /* styles */
+}
+/* Tablets, iPads (portrait) ---------- */
+@media screen and (min-width: 768px){
+  /* styles */
+}
+/* Tablets, iPads (landscape) ---------- */
+@media screen and (min-width: 1024px){
+  .profile-card {
+    margin: 5rem;
+    box-shadow: 5px 5px 10px #999;
+  }
+  .carousel-inner {
+    width: 100%;
+    height: 130%;
+  }
+  .navbar {
+    height: 150px;
+  }
+  .navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10px;
+  }
+
+  .nav-item-1 {
+    padding-left: 7rem;
+  }
+
+  .nav-item-2 {
+    padding-left: 10rem;
+  }
+}
+/* Desktops and laptops ---------- */
+@media screen and (min-width: 1224px){
+  /* styles */
+}
+/* Large screens ---------- */
+@media screen and (min-width: 1824px){
+  /* styles */
 }

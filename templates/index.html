@@ -2,15 +2,14 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
 	<title>Complete Bootstrap 4 Website Layout</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	
 	<link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
 	<!-- Navbar-->
-	<nav class="navbar navbar-expand-md navbar-dark sticky top" >
+	<nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top" >
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="#"><img src="static/logo1.png"></a>
@@ -19,26 +18,26 @@
 				<span class="navbar-toggler-icon"></span>
 			  </button>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
-				<ul class="navbar-nav ">
-					<li class="nav-item active">
-						<a class="nav-link" href="#">Home</a>
+				<ul class="navbar-nav ul-1">
+					<li class="nav-item-1 active">
+						<a class="nav-link" href="#carouseldiv">Home</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Team</a>
+					<li class="nav-item-1">
+						<a class="nav-link" href="#welcomediv">About Us</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Location</a>
+					<li class="nav-item-1">
+						<a class="nav-link" href="#team">Team</a>
 					</li>
 				</ul>
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="#">Services</a>
+				<ul class="navbar-nav ul-2 ml-auto">
+					<li class="nav-item-2">
+						<a class="nav-link" href="#categories">Categories</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Contact</a>
+					<li class="nav-item-2">
+						<a class="nav-link" href="#connect">Connect</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Connect</a>
+					<li class="nav-item-2">
+						<a class="nav-link" href="#">Locations</a>
 					</li>
 				</ul>
 			</div>
@@ -46,7 +45,7 @@
 	</nav>
 	<!--Navbar end-->
 	<!--Motivation Board-->
-	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" id="carouseldiv">
 		<ul class="carousel-indicators">
 			<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
 			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -75,7 +74,7 @@
 	  <!--Motivation board ends-->
 	  
 	  <!--About Us starts-->
-	  <div class="container-fluid">
+	  <div class="container-fluid" id="welcomediv">
 		<div class="row welcome text-center">
 			<div class="col-12">
 				<h1 class="display-4">Welcome</h1>
@@ -91,7 +90,7 @@
 	<!--About Us ends-->
 	<hr class="divider">
 	<!--- Meet the team -->
-<div class="container-fluid padding">
+<div class="container-fluid padding" id="team">
 	<div class="row welcome text-center">
 		<div class="col-12">
 			<h1 class="display-4">Meet the Trainers</h1>
@@ -107,7 +106,7 @@
 			<div class="profile-card">
 				<img class="card-img-top img-fluid" src="static/sangeetapanwar.jpg" alt="Card image cap">
 				<div class="card-body">
-				  <h5 class="card-title">Card title</h5>
+				  <h5 class="card-title">Sangeeta Panwar</h5>
 				  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 				  <a href="#" class="btn btn-outline-secondary">Go somewhere</a>
 				</div>
@@ -117,7 +116,7 @@
 			<div class="profile-card">
 				<img class="card-img-top img-fluid" src="static/toshita.jpeg" alt="Card image cap">
 				<div class="card-body">
-				  <h5 class="card-title">Card title</h5>
+				  <h5 class="card-title">Toshita Panwar</h5>
 				  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 				  <a href="#" class="btn btn-outline-secondary">Go somewhere</a>
 				</div>
@@ -127,7 +126,7 @@
 </div>
 <hr class="divider">
 <!--Types of classes-->
-<div class="container-fluid padding">
+<div class="container-fluid padding" id="categories">
 	<div class="row welcome text-center">
 		<div class="col-12">
 			<h1 class="display-4">Categories</h1>
@@ -142,16 +141,17 @@
 				<img class="card-img-top img-fluid" src="static/regulardanceclasses.jpg" alt="Card image cap">
 				<div class="card-body">
 				  <h5 class="card-title">Regular Dance Classes</h5>
-				  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				  <p class="card-text">These are the dance classes we host at our home on daily basis if you are nearby us and can come physically to attend the classes there is nothing better than this.</p>
 				</div>
 				<ul class="list-group list-group-flush">
-				  <li class="list-group-item">Cras justo odio</li>
-				  <li class="list-group-item">Dapibus ac facilisis in</li>
-				  <li class="list-group-item">Vestibulum at eros</li>
+					<h4 class="text-center">Class Schedule</h2>
+				  <li class="list-group-item">Ladies Fitness Batch : 6-7am</li>
+				  <li class="list-group-item">Kids Batch (4-6yrs) : 5-6pm</li>
+				  <li class="list-group-item">Junior Batch (7-9yrs) : 6-7pm</li>
+				  <li class="list-group-item">Senior Beginners Batch (10-14yrs) : 7-8pm</li>
 				</ul>
 				<div class="card-body">
-				  <a href="#" class="card-link">Card link</a>
-				  <a href="#" class="card-link">Another link</a>
+				  <a href="#" class="card-link">Know more...</a>
 				</div>
 			  </div>
 		</div>
@@ -161,17 +161,17 @@
 				<div class="card-body">
 				  <h5 class="card-title">Online Dance Classes</h5>
 				  <p class="card-text">Due to this pandemic online classes has become a trend and will be a big thing for years to come
-						More and more people are looking for online classes daily and we are here to provide it to these people.
+						And if you are looking for an online dance class then this is for you.
 				  </p>
 				</div>
 				<ul class="list-group list-group-flush">
-				  <li class="list-group-item">Cras justo odio</li>
-				  <li class="list-group-item">Dapibus ac facilisis in</li>
-				  <li class="list-group-item">Vestibulum at eros</li>
+				  <li class="list-group-item">Class Schedule coming soon..</li>
+				  <li class="list-group-item">Registration link coming soon..</li>
+				  <li class="list-group-item">Online Platform to be decided</li>
+				  <li class="list-group-item">Batches will depend upon the registrations</li>
 				</ul>
 				<div class="card-body">
-				  <a href="#" class="card-link">Card link</a>
-				  <a href="#" class="card-link">Another link</a>
+				  <a href="#" class="card-link">Know more...</a>
 				</div>
 			  </div>
 		</div>
@@ -180,16 +180,16 @@
 				<img class="card-img-top img-fluid" src="static/marriage.jpg" alt="Card image cap">
 				<div class="card-body">
 				  <h5 class="card-title">Dance Workshops</h5>
-				  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				  <p class="card-text">These are special classes taken time to time at different locations</p>
 				</div>
 				<ul class="list-group list-group-flush">
-				  <li class="list-group-item">Cras justo odio</li>
+					<h4 class="text-center">Previously hosted Workshops</h4>
+				  <li class="list-group-item">dadnkan</li>
 				  <li class="list-group-item">Dapibus ac facilisis in</li>
 				  <li class="list-group-item">Vestibulum at eros</li>
 				</ul>
 				<div class="card-body">
-				  <a href="#" class="card-link">Card link</a>
-				  <a href="#" class="card-link">Another link</a>
+				  <a href="#" class="card-link">Know more...</a>
 				</div>
 			  </div>
 		</div>
@@ -198,16 +198,16 @@
 				<img class="card-img-top img-fluid" src="static/marriage.jpg" alt="Card image cap">
 				<div class="card-body">
 				  <h5 class="card-title">Marriage Choreography</h5>
-				  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				  <p class="card-text">Do you have a marriage coming up and you want to perform for your loved once, we will take care of it.</p>
 				</div>
 				<ul class="list-group list-group-flush">
-				  <li class="list-group-item">Cras justo odio</li>
-				  <li class="list-group-item">Dapibus ac facilisis in</li>
-				  <li class="list-group-item">Vestibulum at eros</li>
+				  <li class="list-group-item">Full Marriage Choreography</li>
+				  <li class="list-group-item">Couple Dance</li>
+				  <li class="list-group-item">Group Performance</li>
+				  <li class="list-group-item">Solo Performance</li>
 				</ul>
 				<div class="card-body">
-				  <a href="#" class="card-link">Card link</a>
-				  <a href="#" class="card-link">Another link</a>
+				  <a href="#" class="card-link">Know more...</a>
 				</div>
 			  </div>
 		</div>
@@ -217,7 +217,7 @@
 <!--Gallery-->
 <hr class="divider">
 <!--Social Media-->
-<div class="connect container-fluid padding">
+<div class="connect container-fluid padding" id="connect">
 	<div class="row text-center padding">
 		<div class="col-12">
 			<h2>Connect</h2>
@@ -226,7 +226,7 @@
 			<a href="#"><i class="fab fa-facebook"></i></a>
 			<a href="https://www.instagram.com/thedanceraasstudio/"><i class="fab fa-instagram"></i></a>
 			<a href="https://www.youtube.com/channel/UCn9QXqz9JeyA_awItb0PYrw"><i class="fab fa-youtube"></i></a>
-			<a href="https://www.youtube.com/channel/UCn9QXqz9JeyA_awItb0PYrw"><i class="fab fa-whatsapp"></i></a>
+			<a href="https://api.whatsapp.com/send?phone=9467868438"><i class="fab fa-whatsapp"></i></a>
 			
 		</div>
 	</div>
@@ -268,8 +268,8 @@
 			<img src="static/logo1.png" alt="">
 			<hr class='light-1'>
 			<p>Contact Person : Sangeeta Panwar</p>
-			<p>thedanceraasstudio@gmail.com</p>
-			<p>Contact Number : 9968160609</p>
+			<p><i class="far fa-envelope"></i>  thedanceraasstudio@gmail.com</p>
+			<p><i class="fas fa-phone-square-alt"></i>  Contact Number : 9968160609</p>
 			<p>Whatsapp Number : 9968160609</p>
 		</div>
 		<div class="col-md-4">
@@ -279,6 +279,7 @@
 			<p>monday 9 to 5</p>
 			<p>Wednesday 9 to 5</p>
 			<p>Friday 9 to 5</p>
+			
 		</div>
 		<div class="col-md-4">
 			<hr class='light'>
@@ -287,9 +288,10 @@
 			<p>K-1504,Princess Park Appartments</p>
 			<p>Sector-86,Near Sai baba mandir</p>
 			<p>Faridabad,Haryana</p>
+			<div id="googleMap" style="width:100%;height:40px;"></div>
 		</div>
 		<div class="col-12">
-			<hr class="light">
+			<hr class="light" style="width: 100%;">
 			<h5>&copy; thedanceraasstudio</h5>
 		</div>
 	</div>
@@ -301,8 +303,22 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
 	<!--<script src="{% static 'scripts/main.js' %}"></script>-->
 <script type="text/javascript">
+
+
+//google maps
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(51.508742,-0.120850),
+  zoom:5,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+
+
+//submiting form to api
 	$('#post-form').on('submit', function(event){
 		event.preventDefault();
 		console.log("form submitted!")  // sanity check
